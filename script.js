@@ -21,8 +21,8 @@ var controllerDiv = document.getElementById("controllers");
 function getItem(ele) {
     console.log("element==>", ele.id);
 
-    // Correcting the deletion logic
-    var index = parseInt(ele.id); // Parsing ID to integer
+    
+    var index = parseInt(ele.id);
     allcontrollers.splice(index, 1);
     console.log("allcontrollers updated=>", allcontrollers);
     showAllData();
@@ -31,13 +31,11 @@ function getItem(ele) {
 function showAllData() {
     controllerDiv.innerHTML = "";
     allcontrollers.forEach(function (data, ind) {
-        // Fixing the display of controller data
         var ele = `<div onclick="getItem(this)" id="${ind}">${data.price} - ${data.company} - ${data.type}</div>`;
         controllerDiv.innerHTML += ele;
     });
 }
 
-// Ensure initial data is shown
 showAllData();
 
   
