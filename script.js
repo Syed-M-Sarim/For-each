@@ -1,20 +1,4 @@
 
-var controllers = {
-    company: "Sony",
-    color: "Black",
-    price: 4000,
-    isNew: true,
-    getDiscountedValue: function (disc) {
-      console.log("This==>", this);
-      var discount = (this.price * disc) / 100;
-      console.log("Discount=>", discount);
-      var discountedPrice = this.price - discount;
-      return discountedPrice;
-    },
-  };
-
-  console.log(controllers.getDiscountedValue(20));
-  
   var allcontrollers = [
     {
       company: "sony",
@@ -36,7 +20,7 @@ var controllers = {
   var controllerDiv = document.getElementById("controllers");
   
   function getItem(ele) {
-    console.log("ele==>", ele.id);
+    console.log("element==>", ele.id);
 
     allcontrollers.splice(ele.id, 1);
     console.log("allcontrollers updated=>", allcontrollers);
